@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val autonomy: Float = binding.editAutonomy.text.toString().toFloat()
             val totalValue: Float = (distance * price / autonomy)
             val totalValueStr: String = "R$ ${"%.2f".format(totalValue)}"
-            binding.textTotalValue.text = "$totalValueStr"
+            binding.textTotalValue.text = totalValueStr
         } else {
             Toast.makeText(this, R.string.validate_fill_all_fields, Toast.LENGTH_SHORT).show()
         }
